@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Dual Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly value="0">
+        </div>
+        
+        <div class="controls">
+            <button onclick="toggleScientific()" class="btn-mode">Mudar Modo</button>
+            <button onclick="clearDisplay()" class="btn-clear">C</button>
+        </div>
+
+        <div class="buttons">
+            <div id="scientific-keys" class="hidden">
+                <button onclick="appendFunction('sin')">sin</button>
+                <button onclick="appendFunction('cos')">cos</button>
+                <button onclick="appendFunction('tan')">tan</button>
+                <button onclick="appendValue('Math.PI')">π</button>
+                <button onclick="factorial()">x!</button>
+                <button onclick="appendValue('**')">^</button>
+                <button onclick="sqrt()">√</button>
+            </div>
+
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('/')">/</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')">*</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')">-</button>
+
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="percentage()">%</button>
+            <button onclick="appendValue('+')">+</button>
+
+            <button onclick="calculate()" class="btn-equal">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
